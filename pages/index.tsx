@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </section>
 
       <div className={styles.imageWrapper}>
-        <Image src={earth} alt='Earth representing global weather' fill />
+        <Image src={earth} alt='earth' fill />
       </div>
     </main>
   );
