@@ -1,0 +1,7 @@
+# ✨ [feat] 
+# 🐛 [fix] 
+# 📚 [docs] 
+# 🚨 [test] 
+# 🔨 [refactor] 
+# 💎 [style] 
+# 🔧 [chore] 
