@@ -1,0 +1,43 @@
+.currentLocationTimeContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+.ceilSection {
+  color: #555;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 1.65rem */
+  letter-spacing: -0.0375rem;
+}
+.bottomSection {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.3rem;
+}
+.bigText {
+  color: #3d3d3d;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 2.475rem */
+  letter-spacing: -0.0375rem;
+}
+.smallText {
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 0.9625rem */
+  letter-spacing: -0.0375rem;
+  padding-bottom: 0.3rem;
+}

@@ -7,3 +7,9 @@ export type TIntroductionProps = {
 export type TWeatherIconProps = {
   iconURL: string | null;
 };
+export type TCurrentLocationTimeProps = {
+  date: string;
+  time: string;
+  location: string;
+  population: string;
+};
