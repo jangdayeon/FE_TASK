@@ -4,3 +4,6 @@ export type TBtnProps = {
 export type TIntroductionProps = {
   text: string;
 };
+export type TWeatherIconProps = {
+  iconURL: string | null;
+};
