@@ -3,7 +3,7 @@ import earth from '../../public/images/earth.png';
 import styles from '../atoms/Introduction.module.css';
 import { type TIntroductionProps } from '../types';
 
-export default function Introducion({ text }: TIntroductionProps) {
+export default function Introduction({ text }: TIntroductionProps) {
   return (
     <section className={styles.introducionSection}>
       <div className={styles.imageWrapper}>

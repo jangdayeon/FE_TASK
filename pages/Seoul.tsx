@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Introduction from '../components/atoms/Introducion';
+import Introduction from '../components/atoms/Introduction';
 import CurrentForecast from '../components/molecules/CurrentForecast';
 import FiveDaysForecast from '../components/molecules/FiveDaysForecast';
 import styles from '../styles/Seoul.module.css';

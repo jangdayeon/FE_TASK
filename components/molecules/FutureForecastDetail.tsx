@@ -5,7 +5,7 @@ import WeatherIcon from '../atoms/WeatherIcon';
 import styles from '../molecules/FutureForecastDetail.module.css';
 import { type TFutureForecastDetailProps } from '../types';
 
-export default function BeforeForecastDetail({
+export default function FutureForecastDetail({
   day,
   isVisible,
   onToggle,

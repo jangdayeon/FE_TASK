@@ -10,8 +10,7 @@ export type TWeatherIconProps = {
   height?: string | number;
 };
 export type TCurrentLocationTimeProps = {
-  date: string;
-  time: string;
+  datetime: string;
   location: string;
   population: string;
 };
