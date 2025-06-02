@@ -20,3 +20,6 @@ export type TCurrentWeatherProps = {
   windSpeed: string;
   humidity: string;
 };
+export type TCurrentForecastProps = {
+  city: string;
+};
