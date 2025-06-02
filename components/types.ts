@@ -13,3 +13,10 @@ export type TCurrentLocationTimeProps = {
   location: string;
   population: string;
 };
+export type TCurrentWeatherProps = {
+  temperature: string;
+  feelsLike: string;
+  weatherDescription: string;
+  windSpeed: string;
+  humidity: string;
+};
