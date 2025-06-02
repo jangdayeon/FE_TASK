@@ -5,7 +5,9 @@ export type TIntroductionProps = {
   text: string;
 };
 export type TWeatherIconProps = {
-  iconURL: string | null;
+  iconURL?: string;
+  width?: string | number;
+  height?: string | number;
 };
 export type TCurrentLocationTimeProps = {
   date: string;
@@ -22,4 +24,26 @@ export type TCurrentWeatherProps = {
 };
 export type TCurrentForecastProps = {
   city: string;
+};
+export type TFiveDaysForecastProps = {
+  city: string;
+};
+
+export type TFutureForecastDetailProps = {
+  day: {
+    date: string;
+    weather: string;
+    temperature: number;
+    detail: string;
+    times: {
+      imgUrl: string;
+      time: string;
+      summary: string;
+      minTemp: string;
+      maxTemp: string;
+    }[];
+  };
+
+  isVisible: boolean;
+  onToggle: () => void;
 };
