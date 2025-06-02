@@ -5,17 +5,15 @@ import { TWeatherIconProps } from '../types';
 
 export default function WeatherIcon({
   iconURL,
-  width = '5rem',
-  height = '5rem',
+  width = 80,
+  height = 80,
 }: TWeatherIconProps) {
-  // iconURL = 'https://openweathermap.org/img/wn/10d@2x.png';
   return (
     <div className={styles.imageWrapper} style={{ width, height }}>
       <Image
         src={iconURL || defaultWeatherIcon}
         alt='weather icon'
-        fill
-        sizes='100%'
+        layout='fill'
       />
     </div>
   );

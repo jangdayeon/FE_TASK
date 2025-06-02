@@ -22,7 +22,16 @@ export type TCurrentWeatherProps = {
   humidity: string;
 };
 export type TCurrentForecastProps = {
-  city: string;
+  dt: string;
+  feels_like: string;
+  humidity: string;
+  summary: string;
+  icon: string;
+  temp: string;
+  wind_speed: string;
+  city_name: string;
+  city_country: string;
+  city_population: string;
 };
 export type TFiveDaysForecastProps = {
   city: string;
