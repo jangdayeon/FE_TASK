@@ -74,7 +74,7 @@
 }
 .open {
   max-height: 50rem;
-  opacity: 10;
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }

@@ -2,6 +2,7 @@ import { gql, useQuery } from '@apollo/client';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Introduction from '../components/atoms/Introduction';
+import Loading from '../components/atoms/Loading';
 import { GET_WEATHER } from '../graphql/queries';
 import client from '../lib/apollo-client';
 import styles from '../styles/Paris.module.css';
@@ -11,7 +12,7 @@ import { getCoordinatesByName } from '../utils/getCoordinatesByName';
 const CurrentForecast = dynamic(
   () => import('../components/molecules/CurrentForecast'),
   {
-    loading: () => <p>Loading Current forecast...</p>, // 사용자 경험 향상
+    loading: () => <Loading />,
     ssr: false,
   }
 );
@@ -19,7 +20,7 @@ const CurrentForecast = dynamic(
 const FiveDaysForecast = dynamic(
   () => import('../components/molecules/FiveDaysForecast'),
   {
-    loading: () => <p>Loading 5-day forecast...</p>, // 사용자 경험 향상
+    loading: () => <Loading />,
     ssr: false,
   }
 );
@@ -32,7 +33,7 @@ const Paris: NextPage = () => {
     client,
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error.message}</p>;
 
   const {

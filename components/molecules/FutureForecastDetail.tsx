@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import downArrow from '../../public/images/downArrow.svg';
-import upArrow from '../../public/images/upArrow.svg';
+import downArrow from '../../public/images/downArrow.png';
+import upArrow from '../../public/images/upArrow.png';
 import { dateFormatter } from '../../utils/dateFormatter';
 import WeatherIcon from '../atoms/WeatherIcon';
 import styles from '../molecules/FutureForecastDetail.module.css';
@@ -27,10 +27,8 @@ export default function FutureForecastDetail({
         </div>
       </div>
 
-      <details
-        className={`${styles.detailWrapper} ${
-          isVisible ? styles.open : styles.closed
-        }`}
+      <div
+        className={`${styles.detailWrapper} ${isVisible ? styles.open : null}`}
       >
         {items.map((i, idx) => (
           <summary key={idx} className={styles.detail}>
@@ -52,7 +50,7 @@ export default function FutureForecastDetail({
             </section>
           </summary>
         ))}
-      </details>
+      </div>
     </section>
   );
 }

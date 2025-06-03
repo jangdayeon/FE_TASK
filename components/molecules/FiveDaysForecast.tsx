@@ -5,7 +5,6 @@ import FutureForecastDetail from './FutureForecastDetail';
 
 export default function FiveDaysForecast({ forecast }: TFiveDaysForecastProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
   return (
     <section className={styles.fiveDaysForecastContainer}>
       <h2 className={styles.head}>5-day Forecast</h2>
