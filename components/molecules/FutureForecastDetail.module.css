@@ -45,7 +45,7 @@
   display: inline-flex;
   flex-direction: column;
   gap: 0.3rem;
-  align-items: end;
+  align-items: flex-end;
 }
 .detailSummary {
   color: #8b8b8b;

@@ -27,13 +27,13 @@ export default function FutureForecastDetail({
         </div>
       </div>
 
-      <div
+      <details
         className={`${styles.detailWrapper} ${
           isVisible ? styles.open : styles.closed
         }`}
       >
         {items.map((i, idx) => (
-          <div key={idx} className={styles.detail}>
+          <summary key={idx} className={styles.detail}>
             <section className={styles.leftDetailSection}>
               <WeatherIcon
                 height={'3.5rem'}
@@ -50,9 +50,9 @@ export default function FutureForecastDetail({
                 {i.temp_min}℃ / {i.temp_max}℃
               </big>
             </section>
-          </div>
+          </summary>
         ))}
-      </div>
+      </details>
     </section>
   );
 }
