@@ -5,13 +5,13 @@ import CurrentForecast from '../components/molecules/CurrentForecast';
 import FiveDaysForecast from '../components/molecules/FiveDaysForecast';
 import { GET_WEATHER } from '../graphql/queries';
 import client from '../lib/apollo-client';
-import styles from '../styles/Seoul.module.css';
+import styles from '../styles/Tokyo.module.css';
 import { groupForecastByDate } from '../utils/convertToFiveForecast';
 import { getCoordinatesByName } from '../utils/getCoordinatesByName';
 
-const Seoul: NextPage = () => {
+const Tokyo: NextPage = () => {
   const { lat, lon }: { lat: number; lon: number } =
-    getCoordinatesByName('Seoul')!;
+    getCoordinatesByName('Tokyo')!;
   const { data, loading, error } = useQuery(GET_WEATHER, {
     variables: { lat: lat, lon: lon, units: 'metric' },
     client,
@@ -33,7 +33,7 @@ const Seoul: NextPage = () => {
   const grouped = groupForecastByDate(dt, forecastList);
 
   return (
-    <main className={styles.SeoulContainer}>
+    <main className={styles.TokyoContainer}>
       <Introduction text={name} />
       <CurrentForecast
         dt={dt}
@@ -51,4 +51,4 @@ const Seoul: NextPage = () => {
     </main>
   );
 };
-export default Seoul;
+export default Tokyo;
