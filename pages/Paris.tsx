@@ -1,13 +1,28 @@
 import { gql, useQuery } from '@apollo/client';
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Introduction from '../components/atoms/Introduction';
-import CurrentForecast from '../components/molecules/CurrentForecast';
-import FiveDaysForecast from '../components/molecules/FiveDaysForecast';
 import { GET_WEATHER } from '../graphql/queries';
 import client from '../lib/apollo-client';
 import styles from '../styles/Paris.module.css';
 import { groupForecastByDate } from '../utils/convertToFiveForecast';
 import { getCoordinatesByName } from '../utils/getCoordinatesByName';
+
+const CurrentForecast = dynamic(
+  () => import('../components/molecules/CurrentForecast'),
+  {
+    loading: () => <p>Loading Current forecast...</p>, // 사용자 경험 향상
+    ssr: false,
+  }
+);
+
+const FiveDaysForecast = dynamic(
+  () => import('../components/molecules/FiveDaysForecast'),
+  {
+    loading: () => <p>Loading 5-day forecast...</p>, // 사용자 경험 향상
+    ssr: false,
+  }
+);
 
 const Paris: NextPage = () => {
   const { lat, lon }: { lat: number; lon: number } =
