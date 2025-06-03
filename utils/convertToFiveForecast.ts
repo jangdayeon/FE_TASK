@@ -1,4 +1,4 @@
-export type ForecastDetail = {
+type ForecastDetail = {
   dt: string;
   icon: string;
   summary: string;
@@ -7,7 +7,7 @@ export type ForecastDetail = {
   [key: string]: any;
 };
 
-export type ForecastMap = Record<string, ForecastDetail[]>;
+type ForecastMap = Record<string, ForecastDetail[]>;
 
 export function groupForecastByDate(
   dt: string,
