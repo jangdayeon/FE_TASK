@@ -1,4 +1,4 @@
-export function formatDateTimeToCustom(dateString: string): string {
+export function dateFormatter(dateString: string): string {
   const date = new Date(dateString);
   if (isNaN(date.getTime())) return '';
 

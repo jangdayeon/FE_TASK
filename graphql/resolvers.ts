@@ -16,9 +16,7 @@ export const resolvers = {
       ]);
 
       const currentData = await currentRes.json();
-      console.log('🚀 ~ currentData:', currentData);
       const forecastData = await forecastRes.json();
-      console.log('🚀 ~ forecastData:', forecastData);
 
       return {
         current: {

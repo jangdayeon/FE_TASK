@@ -1,4 +1,4 @@
-import { formatDateTimeToCustom } from '../../utils/dateFormatter';
+import { dateFormatter } from '../../utils/dateFormatter';
 import CurrentLocationTime from '../atoms/CurrentLocationTime';
 import CurrentWeather from '../atoms/CurrentWeather';
 import WeatherIcon from '../atoms/WeatherIcon';
@@ -23,7 +23,7 @@ export default function CurrentForecast({
         <section className={styles.leftSection}>
           <WeatherIcon iconURL={icon} />
           <CurrentLocationTime
-            datetime={formatDateTimeToCustom(dt)}
+            datetime={dateFormatter(dt)}
             location={city_name + ', ' + city_country}
             population={city_population}
           />

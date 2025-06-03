@@ -6,13 +6,13 @@ import FiveDaysForecast from '../components/molecules/FiveDaysForecast';
 import { GET_WEATHER } from '../graphql/queries';
 import client from '../lib/apollo-client';
 import styles from '../styles/Seoul.module.css';
+import { groupForecastByDate } from '../utils/convertToFiveForecast';
 
 const Seoul: NextPage = () => {
   const { data, loading, error } = useQuery(GET_WEATHER, {
     variables: { lat: 37.5665, lon: 126.978, units: 'metric' },
     client,
   });
-  console.log('🚀 ~ CurrentForecast ~ data:', data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -26,6 +26,8 @@ const Seoul: NextPage = () => {
       },
     },
   } = data;
+
+  const grouped = groupForecastByDate(dt, forecastList);
 
   return (
     <main className={styles.SeoulContainer}>
@@ -42,7 +44,7 @@ const Seoul: NextPage = () => {
         city_country={country}
         city_population={population}
       />
-      <FiveDaysForecast city='Seoul' />
+      <FiveDaysForecast forecast={grouped} />
     </main>
   );
 };

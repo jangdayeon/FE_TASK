@@ -33,25 +33,22 @@ export type TCurrentForecastProps = {
   city_country: string;
   city_population: string;
 };
+type ForecastDetail = {
+  dt: string;
+  icon: string;
+  summary: string;
+  temp_max: string;
+  temp_min: string;
+};
+
+type ForecastMap = Record<string, ForecastDetail[]>;
 export type TFiveDaysForecastProps = {
-  city: string;
+  forecast: ForecastMap;
 };
 
 export type TFutureForecastDetailProps = {
-  day: {
-    date: string;
-    weather: string;
-    temperature: number;
-    detail: string;
-    times: {
-      imgUrl: string;
-      time: string;
-      summary: string;
-      minTemp: string;
-      maxTemp: string;
-    }[];
-  };
-
+  date: string;
+  items: ForecastDetail[];
   isVisible: boolean;
   onToggle: () => void;
 };
